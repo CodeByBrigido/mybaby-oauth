@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Privacy Policy | My Baby: Time Capsule</title>
+
+    <meta name="description" content="What My Baby: Time Capsule keeps, where it keeps it, and what you can delete." />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+<link rel="alternate" hreflang="pt-BR" href="../privacidade.html">
+<link rel="alternate" hreflang="en" href="privacy.html">
+<link rel="alternate" hreflang="es" href="../es/privacidad.html">
+<link rel="alternate" hreflang="fr" href="../fr/confidentialite.html">
+<link rel="alternate" hreflang="de" href="../de/datenschutz.html">
+<link rel="alternate" hreflang="it" href="../it/privacy.html">
+  </head>
+
+  <body data-page-title="Privacy Policy" data-component-path="../components/">
+    <main>
+      <div data-component="header"></div>
+
+      <p class="data">Last updated: 31 August 2026</p>
+      <h2>In short</h2>
+    <p>Photos, videos and documents never pass through a server of ours: they go straight from your device to the Google Drive of your own account.</p>
+    <p>The app keeps on a server only a text index, which is what makes the timeline and the search work.</p>
+    <p>There is no advertising, tracking, profiling or sale of data.</p>
+    <p>The Premium subscription is billed by Google Play. No payment data passes through us.</p>
+    <p>You can delete all of it at any time, inside the app, without asking anyone.</p>
+      <h2>Your role and ours</h2>
+    <p>When someone uses the app solely to record and keep memories of their own family, that use may fall within the purely personal or household activity exception in Art. 2(2)(c) of the GDPR. That exception concerns whether the GDPR applies to the processing carried out by the person themselves, and it does not change the responsibilities that may fall to the app for the personal data the app itself processes.</p>
+    <p>The app is for that use: personal and family, with no commercial purpose. Using it to record children who are not yours and not under your legal responsibility, or to offer this service to third parties, falls outside what the plans cover.</p>
+    <p>We have different responsibilities depending on the data and the service involved. For the index we keep in order to run the app, such as the profile, the timeline and the text of the letters, we are responsible for deciding the purposes and the essential means of that processing and, where the GDPR applies, we act as the controller of that data. For files sent directly to the user's Google Drive account, the app does not receive a copy of those files and does not store them on servers of its own. Use of Google Drive is also subject to Google's terms and privacy policy. Our app acts only within the permissions granted by the user.</p>
+      <h2>What stays in your Google Drive</h2>
+    <p>When you sign in, you authorise the app to use the Google Drive of your account with the drive.file scope. That scope gives access only to the files the app itself creates. It does not allow reading, listing or modifying any other file in your Drive, and that limitation is imposed by Google, not by us.</p>
+    <p>Inside the capsule folder in your Drive live the photos, videos, drawings and documents you send.</p>
+    <p>Two kinds of text file written by the app live there too: one with the profile, the growth records and the descriptions you write about each piece of media, and one for each letter you write. They exist so this collection keeps making sense without the app: a photo explains itself in a folder; a letter, a weight record and what you wrote about a photo do not.</p>
+    <p>Those files are yours. We have no copy of them, we cannot see them and we have no technical means of reaching them outside the app in use in your session.</p>
+    <p>GPS coordinates are stripped from every photo before it is sent.</p>
+      <h2>What stays in our index</h2>
+    <p>The index lives in Cloud Firestore, a Google Cloud service. This is the complete list of what it holds:</p>
+    <ul>
+      <li>From the profile: the child's name, date of birth, sex as informed, birth weight and length, hospital name if filled in, the identifiers of the root folder and of the information file in your Drive, and the language chosen for the folder names.</li>
+      <li>From the plan: a single value, yes or no, saying whether the account has the Premium subscription. Nothing else about payment passes through here.</li>
+      <li>From each memory: type, date, age in days, title, description and, in the case of letters, the full text of the letter; weight and length of the growth records; the opening date, when a memory is sealed.</li>
+      <li>From each file: the identifier, the name, the type, the size, the image dimensions or the video duration, and the description you write about that file. The file itself does not pass through here: it is in your Drive.</li>
+      <li>While an upload is in progress, the path of the temporary copy on your device, which serves to show the thumbnail before the upload finishes. It is deleted from the index as soon as the upload completes, and only remains if the upload fails. In that case it goes away when you retry successfully or delete the memory.</li>
+      <li>Supporting data: the cache of identifiers of the folders created in Drive and the progress of the suggestions you have ticked.</li>
+      <li>From authentication: Firebase Authentication holds your user identifier, your email, your name and the address of your Google profile photo.</li>
+    </ul>
+    <p>Each index is isolated per account. Security rules on the server stop any account from reading or writing another's data, and those rules are checked by automated tests on every change to the app.</p>
+      <h2>The subscription payment</h2>
+    <p>The Premium subscription is billed by Google Play, not by us. Card, billing address, invoice and purchase history stay with them, under their privacy policy.</p>
+    <p>We do not receive, see or keep any payment data. On our side there is only the yes or no value described above, in that account's index, which is what lets the app know whether to allow keeping letters, drawings, documents and growth.</p>
+    <p>Because the subscription is per account, and each child has their own Google account, that value is never compared between accounts nor used to link one account to another.</p>
+      <h2>What never leaves the device</h2>
+    <p>Reminder settings, the mark that the introduction has been seen, the inspirations already seen, read and saved, the preference to show the descriptions on the timeline, the biometric lock preference and the cache of photo thumbnails.</p>
+    <p>None of it is sent anywhere. It leaves the device when you sign out or uninstall the app.</p>
+      <h2>What is not collected</h2>
+    <p>This is a closed list:</p>
+    <ul>
+      <li>No usage data, statistics or analytics. The app has no Google Analytics, Firebase Analytics, Crashlytics or any equivalent tool.</li>
+      <li>No advertising and no advertising identifier.</li>
+      <li>No profiling and no automated decision about you.</li>
+      <li>No location, contacts, calendar, background microphone or browsing history.</li>
+      <li>No sale, rental or exchange of data with third parties, under any circumstances.</li>
+      <li>No notification coming from a server. Reminders are worked out and scheduled inside the device itself.</li>
+    </ul>
+    <p>If that changes in some future version, this policy changes first, and the notice appears in the app.</p>
+      <h2>Who the data is shared with</h2>
+    <p>Data is shared with or processed by Google services that are necessary for certain functions of the app:</p>
+    <ul>
+      <li>Google Sign-In, to sign in to your account.</li>
+      <li>Firebase Authentication, to keep the session.</li>
+      <li>Cloud Firestore, to hold the index.</li>
+      <li>Google Drive, to hold your files in your own account.</li>
+      <li>Google Play, to bill the Premium subscription and report whether it is active, for anyone who subscribes.</li>
+    </ul>
+    <p>There is no other recipient chosen by us. We use no ad network, data broker or analytics service.</p>
+    <p>The legal relationship applying to each Google service depends on the product used, the account configuration and the corresponding contractual terms. Where Google acts as a processor in relation to processing carried out by us, that processing is governed by the applicable contractual instrument, including the Google Cloud/Firebase data protection terms. For services where Google acts in its own name or directly towards the user, Google's terms and privacy policy also apply.</p>
+    <p>Processing by Google is described in its privacy policy: policies.google.com/privacy</p>
+      <h2>Legal basis for each processing</h2>
+    <ul>
+      <li>Profile, index, authentication and the essential running of the account: performance of the contract, Art. 6(1)(b) of the GDPR, where that processing is necessary to provide the functionality requested.</li>
+      <li>Reminder notifications: consent, Art. 6(1)(a), revocable at any time in Settings.</li>
+      <li>Record of the plan contracted: performance of the contract, Art. 6(1)(b), to the extent necessary to administer the subscription and unlock the corresponding features.</li>
+      <li>Sending and storing files in Google Drive: an operation requested by the user and carried out through the authorisation granted to Google Drive, without the app keeping a copy of those files of its own.</li>
+    </ul>
+    <p>We do not use legitimate interest as a basis for the processing described in this policy. If a legal obligation requires certain data to be kept after the account is deleted, that data may be retained for the period required by law.</p>
+      <h2>A child's data</h2>
+    <p>The app holds data about a child, but is not intended for children and is not used by them. Whoever installs, registers and sends content is the parent or legal guardian, over 18.</p>
+    <p>By registering a child, you declare that you are their legal guardian and have authority to provide that data.</p>
+    <p>There is no public listing, visible profile, social network, comments, messages between users or any form of exposing the content to third parties. The capsule is private by construction: the files are in the Drive of whoever sent them and the index is isolated per account.</p>
+    <p>When the child comes of age, they may directly exercise the rights applicable to their personal data, subject to the law in force. The app was designed to make that continuity easier: the files live in the Google account used by the family and can be made available to the person themselves, without depending on a transfer of files stored on our servers.</p>
+      <h2>For how long, and how to delete</h2>
+    <p>The data stays as long as the account exists. There is no automatic disposal period while the account remains active, because the purpose of the product is precisely long-term keeping. Where there is a legal retention obligation or another legal basis requiring certain data to be kept, it may be retained for the necessary period.</p>
+    <p>In Profile, &quot;Apagar minha conta e meus dados&quot; (Delete my account and my data), you delete the entire index on our server, sweeping every collection, with confirmation on the server and not in the local cache; your authentication account; and all data held on the device.</p>
+    <p>On the same screen you choose what to do with the Google Drive folder. By default it is kept, because the files are stored directly in your account and the app does not keep a copy of its own. If the permission and the Google APIs available at that moment allow the operation, you may ask the app to move the folder to your Drive trash. Permanently deleting the files inside Google Drive also depends on Google's own rules and deletion mechanisms.</p>
+    <p>Deleting the index starts immediately and, once complete, cannot be undone by the app. We keep no operational backup of the index to restore a deleted account. Data that must be kept under a legal obligation may remain for the required period and will be protected against use incompatible with that purpose.</p>
+      <h2>Who is responsible</h2>
+    <p>Controller of the personal data, in the sense of Art. 4(7) of the GDPR: Rodrigo Andrade Brigido, an individual, sole developer, established in Ireland.</p>
+    <p>Because the person responsible for the app is established in Ireland, the GDPR applies to the processing that falls within its scope. Where the one-stop-shop mechanism applies to cross-border processing, the lead supervisory authority is determined in accordance with Art. 56 of the GDPR. You may also lodge a complaint with the data protection authority of the country where you live or work, or of the place where the alleged infringement took place.</p>
+    <p>Contact: <a href="mailto:mybabytimecapsule@gmail.com">mybabytimecapsule@gmail.com</a></p>
+    <p>Any request about personal data may be sent to that address. We reply without undue delay and, as a rule, within one month, under Art. 12(3) of the GDPR. Where the law allows an extension of that deadline, we will tell you within the first month and explain why.</p>
+      <h2>Your rights, wherever you live</h2>
+    <p>The name of the law changes from country to country. The rights, in practice, are the same, and we give all of them to everyone, without asking where you live: access, correction, deletion, portability, restriction, objection and withdrawal of consent.</p>
+    <ul>
+      <li>European Union and European Economic Area: GDPR, Arts. 15 to 22.</li>
+      <li>United Kingdom: UK GDPR and Data Protection Act 2018, same articles.</li>
+      <li>Brazil: LGPD, Art. 18.</li>
+      <li>Argentina: Ley 25.326, with a reform under way. Argentina is one of the few countries outside Europe with an adequacy decision from the European Union, which says a good deal about the level of protection its law already demands.</li>
+      <li>Uruguay: Ley 18.331, also with European Union adequacy.</li>
+      <li>Chile: Ley 19.628, being replaced by Ley 21.719, approved in December 2024 and modelled on the GDPR, coming into force in stages.</li>
+      <li>Colombia: Ley 1581 of 2012 (Habeas Data), with its own and stricter rule for children's data: the processing must respect the child's best interest, not merely the guardian's consent. That is a higher standard, and our design already meets it, because the only purpose here is the child's own capsule, with no exposure to any third party.</li>
+      <li>Peru: Ley 29733. Ecuador: Organic Law on Protection of Personal Data (LOPDP), of 2021.</li>
+      <li>In the other South American countries, without a comprehensive law of their own yet: the same rights, by our policy.</li>
+      <li>United States: California has the most demanding law (CCPA and CPRA, see the next section), and a growing list of other states such as Virginia, Colorado, Connecticut and Utah have similar laws, with the same rights to know, delete, correct, port and refuse sale or sharing. As we sell and share no data under any circumstances, that last right comes exercised by default, in every state, with or without a specific law.</li>
+      <li>Switzerland: nFADP. Canada: PIPEDA. Australia: Privacy Act and the Australian Privacy Principles. South Africa: POPIA. Japan: APPI. India: DPDPA, as each provision comes into force.</li>
+      <li>Anywhere else: the same rights, by our policy, even where local law does not yet require them.</li>
+    </ul>
+    <p>In practice, almost all of them are exercised without talking to us: the data is visible in the app, editable in the app and deletable in the app. For anything the app does not solve, write to <a href="mailto:mybabytimecapsule@gmail.com">mybabytimecapsule@gmail.com</a></p>
+    <p>You do not need to justify the request, exercising a right never costs anything, and we never reduce the service of anyone who exercises one.</p>
+      <h2>If you live in California</h2>
+    <p>The CCPA, as amended by the CPRA, asks for some sentences to be said in plain words, and all of them are true here:</p>
+    <ul>
+      <li>We <strong>do not sell</strong> personal information, and never have.</li>
+      <li>We <strong>do not share</strong> personal information for cross-context behavioural advertising. There is no advertising at all in this app.</li>
+      <li>We do not use or disclose sensitive personal information for anything beyond providing the service you asked for.</li>
+      <li>We offer no financial incentive in exchange for data.</li>
+      <li>We do not discriminate against anyone who exercises a right: the app works the same before and after.</li>
+    </ul>
+    <p>Because we neither sell nor share anything, there is no &quot;Do Not Sell or Share My Personal Information&quot; button, since there would be nothing to switch off.</p>
+    <p>The categories we collect, why, and who they are shared with are in the sections above, and that list is closed.</p>
+    <p>If you live in another US state with its own privacy law, the same six sentences above apply to you too: they describe how the app works, not an exception thought up only for people in California.</p>
+      <h2>International transfer</h2>
+    <p>Your files live in the Google Drive of your own account, and their location is whatever Google gives your account, not a choice of ours. The index lives on Cloud Firestore infrastructure, which may process data outside your country.</p>
+    <p>Those transfers are covered by the Standard Contractual Clauses approved by the European Commission, adopted by Google under Art. 46 of the GDPR, and by the United Kingdom addendum to those same clauses. Google Cloud is also certified under the EU-US Data Privacy Framework.</p>
+    <p>For anyone in Brazil, the transfer rests on Art. 33 of the LGPD, under the same contractual clauses.</p>
+    <p>We do not carry out international transfers on our own initiative beyond the processing needed to run the infrastructure services described in this policy. The index may be processed on Google Cloud infrastructure, including in locations outside the user's country, according to the configuration and terms of the services used. Google Drive files remain subject to the infrastructure and settings of the user's own Google account.</p>
+      <h2>Security</h2>
+    <p>All traffic is encrypted in transit, and data at rest is encrypted by Google's infrastructure. Access to the index is controlled by server-side security rules that require authentication and restrict each account to its own data. The app offers a lock by biometrics or device PIN.</p>
+    <p>No system is entirely secure, and we do not promise otherwise. What reduces the risk structurally here is the design: the photos and videos are not on a server of ours, so there is no media database of ours to be leaked.</p>
+    <p>If a data breach affecting the index happens, we notify the Data Protection Commission of Ireland within 72 hours of becoming aware, as Art. 33 of the GDPR requires, and we tell you directly when the risk to your rights is high, as Art. 34 requires. Where another law of your country imposes a different deadline or recipient, such as the LGPD (Art. 48) or the CCPA, we meet both.</p>
+      <h2>Children, and why this app is different</h2>
+    <p>This app holds data <strong>about</strong> a child, and is not used <strong>by</strong> her. Whoever installs, signs in and records is the parent or whoever is legally responsible for her, and must be of age.</p>
+    <p>That is why the app is not directed to children and was not designed for minors to create or use accounts on their own. Whoever installs, signs in and enters information must be a responsible adult. There is no advertising, public profile, interaction between users or any feature meant to encourage independent use by children.</p>
+    <p>The data about the child is provided by the responsible adult for the purpose of creating and keeping the time capsule. Processing of data about children and adolescents follows the applicable law and, where relevant, the principles of full protection and the best interest of the child.</p>
+    <p>When the child grows up and takes over the account, she becomes the data subject and exercises all the rights in the section above directly, without needing us for anything.</p>
+    <p>Several countries are creating a specific protection code for products a child might come to access, such as the United Kingdom's Children's Code. We claim no certification in that direction, but the design of the app already follows the same principles: no advertising, no profiling, no notification designed to hold attention, no games, no engagement rewards and no public sharing by default. A memory can even be sealed, to open only on a future date chosen by whoever kept it, the opposite of a design meant to maximise use.</p>
+      <h2>Changes to this policy</h2>
+    <p>Relevant changes are announced inside the app before they take effect. The date at the top indicates the version in force, and previous versions remain available in the public history of the repository.</p>
+      <h2>Complaints</h2>
+    <p>If you believe the processing of your data breaks the law, you can complain to the authority of the place where you live, and you do not need to talk to us first.</p>
+    <ul>
+      <li>Ireland: Data Protection Commission (DPC), especially where the DPC is the competent or lead supervisory authority under the GDPR.</li>
+      <li>European Union: you may prefer the authority of your own Member State, and it forwards. The list is at edpb.europa.eu</li>
+      <li>Brazil: ANPD, gov.br/anpd</li>
+      <li>Argentina: Agencia de Acceso a la Información Pública (AAIP).</li>
+      <li>Uruguay: Unidad Reguladora y de Control de Datos Personales (URCDP).</li>
+      <li>Chile: the new Agencia de Protección de Datos Personales, as Ley 21.719 comes into force.</li>
+      <li>Colombia: Superintendencia de Industria y Comercio (SIC).</li>
+      <li>United Kingdom: ICO, ico.org.uk</li>
+      <li>Switzerland: FDPIC. Canada: OPC. Australia: OAIC.</li>
+      <li>California: California Privacy Protection Agency, cppa.ca.gov, or the state Attorney General.</li>
+    </ul>
+    <p>If you would rather try us first, write to <a href="mailto:mybabytimecapsule@gmail.com">mybabytimecapsule@gmail.com</a>. We reply within 30 days, and an answer from us is never a condition for you to approach the authority.</p>
+
+      <div data-component="footer"></div>
+    </main>
+
+    <script src="../js/components.js"></script>
+  </body>
+</html>
