@@ -2,17 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>My Baby: Time Capsule</title>
-
+    <title>My Baby - Time Capsule</title>
     <meta
       name="description"
-      content="My Baby: Time Capsule is a digital diary for recording and preserving your child's childhood memories."
+      content="Keep your child's photos, videos, letters, drawings and growth on a timeline organised by age, all in the child's own Google Drive. No ads, no tracking."
     />
+    <meta name="theme-color" content="#fcf3ee" />
+    <link rel="icon" href="../img/icone.webp" type="image/webp" />
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="My Baby - Time Capsule: your child's childhood, kept forever" />
+    <meta
+      property="og:description"
+      content="Photos, videos, letters and milestones on one timeline, in the child's own Google Drive."
+    />
+    <meta property="og:image" content="../img/compartilhar.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="alternate" hreflang="pt-BR" href="../index.html" />
     <link rel="alternate" hreflang="en" href="index.html" />
@@ -20,67 +26,412 @@
     <link rel="alternate" hreflang="fr" href="../fr/index.html" />
     <link rel="alternate" hreflang="de" href="../de/index.html" />
     <link rel="alternate" hreflang="it" href="../it/index.html" />
+
+    <link rel="preload" href="../fonts/PlusJakartaSans-ExtraBold.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="../css/landing.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
   </head>
 
-  <body
-    data-page-title="My Baby: Time Capsule"
-    data-component-path="../components/"
-  >
+  <body>
+    <header class="topo">
+      <div class="conteiner">
+        <a class="marca" href="index.html">
+          <img src="../img/icone.webp" alt="" width="36" height="36" />
+          My Baby
+        </a>
+        <nav aria-label="Language and download">
+          <a class="idioma" href="../index.html" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a
+            class="botao-play botao-pequeno"
+            href="https://play.google.com/store/apps/details?id=com.mybabytimecapsule.app"
+            rel="noopener"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#00d7fe" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-.9.6-1.2Z" />
+              <path fill="#ffce00" d="m16.8 8.6 3.2 1.8c1.2.7 1.2 2.5 0 3.2l-3.2 1.8L13.4 12Z" />
+              <path fill="#ff3a44" d="M3.6 22.2 13.4 12l3.4 3.4-11.4 6.5c-.6.4-1.3.5-1.8.3Z" />
+              <path fill="#00f076" d="M3.6 1.8c.5-.2 1.2-.1 1.8.3l11.4 6.5L13.4 12Z" />
+            </svg>
+            <span><strong>Download</strong></span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
     <main>
-      <div data-component="header"></div>
+      <!-- Hero -->
+      <div class="abertura">
+        <div class="conteiner">
+          <div>
+            <span class="selo">A time capsule for childhood</span>
+            <h1>Your child's childhood, <em>kept forever.</em></h1>
+            <p class="lead">
+              Photos, videos, letters, drawings and growth, on one timeline
+              organised by your child's age. And everything lives in the child's
+              own Google Drive, not on someone else's server.
+            </p>
+            <div class="acoes">
+              <a
+                class="botao-play"
+                href="https://play.google.com/store/apps/details?id=com.mybabytimecapsule.app"
+                rel="noopener"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#00d7fe" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-.9.6-1.2Z" />
+                  <path fill="#ffce00" d="m16.8 8.6 3.2 1.8c1.2.7 1.2 2.5 0 3.2l-3.2 1.8L13.4 12Z" />
+                  <path fill="#ff3a44" d="M3.6 22.2 13.4 12l3.4 3.4-11.4 6.5c-.6.4-1.3.5-1.8.3Z" />
+                  <path fill="#00f076" d="M3.6 1.8c.5-.2 1.2-.1 1.8.3l11.4 6.5L13.4 12Z" />
+                </svg>
+                <span><small>Get it on</small><strong>Google Play</strong></span>
+              </a>
+              <span class="nota">Free to start · Android</span>
+            </div>
+          </div>
+          <div class="vitrine">
+            <img
+              class="celular"
+              src="../img/01-inicio.webp"
+              width="498"
+              height="1123"
+              alt="The app home screen, with the child's name and age, the next milestone and recent photos"
+            />
+            <img
+              class="celular"
+              src="../img/03-cartas.webp"
+              width="498"
+              height="1123"
+              alt=""
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
 
-      <section>
-        <p>
-          <strong>My Baby: Time Capsule</strong> is a digital diary designed to
-          record, organize, and preserve your child's childhood memories.
-        </p>
+      <!-- Faixa de confiança -->
+      <div class="faixa">
+        <div class="conteiner">
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.5 12 3.5 3.5 0 0 0 5 19Z" /></svg>
+              In your Google Drive
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6Z" /><path d="m9 12 2 2 4-4" /></svg>
+              No ads, no tracking
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg>
+              Fingerprint or face lock
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" /></svg>
+              In 6 languages
+            </li>
+          </ul>
+        </div>
+      </div>
 
-        <p>
-          The application allows you to store photos, videos, stories, important
-          moments, and other memories in a digital time capsule, organized to
-          follow your child's journey throughout the years.
-        </p>
+      <!-- Recursos -->
+      <section id="recursos">
+        <div class="conteiner">
+          <div class="titulo-secao surge">
+            <h2>Everything that matters, in one place</h2>
+            <p>
+              No more memories scattered across the camera roll, chat apps and
+              paper boxes. Every moment gets a date, an age and a place.
+            </p>
+          </div>
 
-        <h2>Storage in Google Drive</h2>
+          <article class="recurso surge">
+            <div>
+              <span class="marcador">Timeline</span>
+              <h3>Month by month, from day one</h3>
+              <p>
+                Photos and videos are organised by your child's age, on a
+                timeline you browse like an album. The app creates the Drive
+                folders for you: "0-1 month", "1 year"…
+              </p>
+              <ul class="lista-check">
+                <li>Many files at once, with a caption on each</li>
+                <li>Videos compressed so your Drive does not fill up</li>
+                <li>"1 year ago": memories that come back on the right day</li>
+              </ul>
+            </div>
+            <div class="recurso-imagem">
+              <img class="celular" src="../img/02-linha-do-tempo.webp" width="498" height="1123" loading="lazy" alt="Mosaic timeline organised by month" />
+            </div>
+          </article>
 
-        <p>
-          My Baby uses <strong>Google Drive</strong> to store the files and data
-          required for the time capsule to function. The data is stored in the
-          Google account selected by the user.
-        </p>
+          <article class="recurso surge">
+            <div>
+              <span class="marcador">Letters to the future</span>
+              <h3>Write today. They read it when they grow up.</h3>
+              <p>
+                Write a letter and choose the day it opens: their 18th birthday,
+                the first day of school, their wedding. Until then, not even you
+                can open, edit or delete it.
+              </p>
+              <ul class="lista-check">
+                <li>Letters sealed until the date you choose</li>
+                <li>Also saved as text in the Drive, readable forever</li>
+              </ul>
+            </div>
+            <div class="recurso-imagem">
+              <img class="celular" src="../img/03-cartas.webp" width="498" height="1123" loading="lazy" alt="List of letters, some sealed until a future date" />
+            </div>
+          </article>
 
-        <p>
-          The application uses the
-          <code>https://www.googleapis.com/auth/drive.file</code> permission.
-          This permission allows My Baby to work with the files and data used by
-          the application without requesting general access to all of the
-          content in your Google Drive.
-        </p>
+          <article class="recurso surge">
+            <div>
+              <span class="marcador">Growth</span>
+              <h3>Weight and height on a clear chart</h3>
+              <p>
+                Note the measurements from check-ups and follow the growth curve
+                over the months, with no spreadsheet and no lost notebook.
+              </p>
+            </div>
+            <div class="recurso-imagem">
+              <img class="celular" src="../img/04-crescimento.webp" width="498" height="1123" loading="lazy" alt="Weight and height chart over the months" />
+            </div>
+          </article>
 
-        <p>
-          The user retains control over their Google account and the data stored
-          in Google Drive. For detailed information about data collection, use,
-          storage, sharing, and deletion, please refer to our Privacy Policy.
-        </p>
+          <article class="recurso surge">
+            <div>
+              <span class="marcador">Drawings and documents</span>
+              <h3>The first scribble and the birth certificate, together</h3>
+              <p>
+                Photograph drawings before they get lost, and keep important
+                documents such as certificates, vaccination records and test
+                results, as PDF, right next to the memories.
+              </p>
+            </div>
+            <div class="recurso-imagem">
+              <img class="celular" src="../img/05-desenhos.webp" width="498" height="1123" loading="lazy" alt="Grid of saved drawings and documents" />
+            </div>
+          </article>
 
-        <h2>Legal Information</h2>
-
-        <ul>
-          <li>
-            <a href="terms.html">Terms of Use</a>
-          </li>
-          <li>
-            <a href="privacy.html">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="deletion.html">Account and Data Deletion</a>
-          </li>
-        </ul>
+          <article class="recurso surge">
+            <div>
+              <span class="marcador">Inspirations</span>
+              <h3>Ideas so nothing slips by</h3>
+              <p>
+                Suggestions of moments to capture at every stage, and reminders
+                on round dates like "15 months on Thursday", so you never forget
+                to take that photo.
+              </p>
+            </div>
+            <div class="recurso-imagem">
+              <img class="celular" src="../img/06-inspiracoes.webp" width="498" height="1123" loading="lazy" alt="Inspirations screen with suggested moments to capture" />
+            </div>
+          </article>
+        </div>
       </section>
 
-      <div data-component="footer"></div>
+      <!-- Privacidade -->
+      <section class="passos" id="privacidade">
+        <div class="conteiner">
+          <article class="recurso surge">
+            <div>
+              <span class="marcador">Real privacy</span>
+              <h2>Your files. Your Drive. Always.</h2>
+              <p>
+                The app keeps no copy of your photos. Every file goes straight to
+                the Google Drive of the child's account, in open formats like
+                JPEG, MP4 and PDF. If you ever stop using the app, the folder
+                stays there, complete.
+              </p>
+              <ul class="lista-check">
+                <li>Nothing is sold, profiled or shared</li>
+                <li>No ads and no tracking</li>
+                <li>Fingerprint or face lock before it opens</li>
+              </ul>
+            </div>
+            <div class="recurso-imagem">
+              <img class="celular" src="../img/07-privacidade.webp" width="498" height="1123" loading="lazy" alt="Privacy screen showing Google Drive connected" />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Como funciona -->
+      <section id="como-funciona">
+        <div class="conteiner">
+          <div class="titulo-secao surge">
+            <h2>Start in three steps</h2>
+            <p>Your capsule is ready in a few minutes.</p>
+          </div>
+          <div class="grade-passos">
+            <div class="passo surge">
+              <h3>Download and sign in</h3>
+              <p>Install from Google Play and sign in with the child's Google account. Everything lives in that Drive.</p>
+            </div>
+            <div class="passo surge">
+              <h3>Add your child</h3>
+              <p>Name and date of birth. The app works out the age of every memory and creates the folders.</p>
+            </div>
+            <div class="passo surge">
+              <h3>Keep the memories</h3>
+              <p>Photos, videos, letters and measurements. One tap on "+" and it is saved.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Destaques -->
+      <section class="passos">
+        <div class="conteiner">
+          <div class="titulo-secao surge">
+            <h2>Made for real family life</h2>
+          </div>
+          <div class="grade-cartoes">
+            <div class="cartao surge">
+              <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3" /><circle cx="17" cy="9" r="2.5" /><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2 .8-3.8 2-4.6 2.5.4 4 2.3 4 4.6" /></svg></div>
+              <h3>More than one child</h3>
+              <p>One capsule for each child, and you switch between them with a tap. The same photo can go to the siblings' capsules too.</p>
+            </div>
+            <div class="cartao surge">
+              <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" /><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0" /></svg></div>
+              <h3>Gentle reminders</h3>
+              <p>Nudges on month-days and birthdays, never too many: at most two a week.</p>
+            </div>
+            <div class="cartao surge">
+              <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8" /><path d="M21 3v5h-5" /></svg></div>
+              <h3>For when they grow up</h3>
+              <p>The account belongs to the child. One day, they receive their whole childhood, kept in their own Drive.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Planos -->
+      <section class="planos" id="planos">
+        <div class="conteiner">
+          <div class="titulo-secao surge">
+            <h2>Start for free</h2>
+            <p>Photos and videos are free forever. Premium opens the rest of the capsule.</p>
+          </div>
+          <div class="grade-planos">
+            <div class="plano surge">
+              <h3>Basic</h3>
+              <p class="preco">Free</p>
+              <ul class="lista-check">
+                <li>Photos and videos, in your Drive storage</li>
+                <li>Timeline by age</li>
+                <li>Inspirations and reminders</li>
+                <li>Everything you kept stays open, always</li>
+              </ul>
+            </div>
+            <div class="plano destaque surge">
+              <h3>Premium family</h3>
+              <p class="preco">Yearly subscription through Google Play, priced for your country</p>
+              <ul class="lista-check">
+                <li>Everything in Basic</li>
+                <li>Letters to the future</li>
+                <li>Drawings and documents</li>
+                <li>Growth chart</li>
+                <li>Covers the capsules of all your children</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Perguntas -->
+      <section id="perguntas">
+        <div class="conteiner">
+          <div class="titulo-secao surge">
+            <h2>Frequently asked questions</h2>
+          </div>
+          <div class="perguntas">
+            <details class="surge">
+              <summary>Where are the photos and videos stored?</summary>
+              <p>In the Google Drive of the child's Google account, in a folder the app creates and organises by age. The app keeps no copy of the files.</p>
+            </details>
+            <details class="surge">
+              <summary>Do I need a Google account for each child?</summary>
+              <p>Yes. Each child has their own account, which is what makes the capsule truly theirs. In the app you add the accounts and switch between them with a tap.</p>
+            </details>
+            <details class="surge">
+              <summary>What if I cancel Premium?</summary>
+              <p>Nothing disappears. Everything you kept stays in the Drive and open in the app, and photos and videos stay free. Only creating letters, drawings, documents and measurements asks for the subscription again.</p>
+            </details>
+            <details class="surge">
+              <summary>Does it work on iPhone?</summary>
+              <p>For now, the app is available on Android only, on Google Play.</p>
+            </details>
+            <details class="surge">
+              <summary>How do I delete my account and data?</summary>
+              <p>From inside the app, or by following the steps on the <a href="deletion.html">account deletion</a> page. The files in your Drive are yours, and only you decide what to do with them.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chamada final -->
+      <section class="chamada">
+        <div class="conteiner">
+          <div class="caixa surge">
+            <h2>The days are long. The years go by fast.</h2>
+            <p>Start your child's time capsule today. A few years from now, you will be glad you did.</p>
+            <a
+              class="botao-play"
+              href="https://play.google.com/store/apps/details?id=com.mybabytimecapsule.app"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#00d7fe" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-.9.6-1.2Z" />
+                <path fill="#ffce00" d="m16.8 8.6 3.2 1.8c1.2.7 1.2 2.5 0 3.2l-3.2 1.8L13.4 12Z" />
+                <path fill="#ff3a44" d="M3.6 22.2 13.4 12l3.4 3.4-11.4 6.5c-.6.4-1.3.5-1.8.3Z" />
+                <path fill="#00f076" d="M3.6 1.8c.5-.2 1.2-.1 1.8.3l11.4 6.5L13.4 12Z" />
+              </svg>
+              <span><small>Get it on</small><strong>Google Play</strong></span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script src="../js/components.js"></script>
+    <footer class="rodape">
+      <div class="conteiner">
+        <span>© 2026 Brigido's Studio · My Baby - Time Capsule</span>
+        <nav aria-label="Documents">
+          <a href="terms.html">Terms of Use</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="deletion.html">Account deletion</a>
+          <a href="../index.html" hreflang="pt-BR" lang="pt-BR">Português</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var topo = document.querySelector(".topo");
+        function rolar() {
+          topo.classList.toggle("rolou", window.scrollY > 8);
+        }
+        window.addEventListener("scroll", rolar, { passive: true });
+        rolar();
+
+        var itens = document.querySelectorAll(".surge");
+        if (!("IntersectionObserver" in window)) {
+          itens.forEach(function (el) { el.classList.add("visivel"); });
+          return;
+        }
+        var olho = new IntersectionObserver(
+          function (entradas) {
+            entradas.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("visivel");
+                olho.unobserve(e.target);
+              }
+            });
+          },
+          { rootMargin: "0px 0px -8% 0px" }
+        );
+        itens.forEach(function (el) { olho.observe(el); });
+      })();
+    </script>
   </body>
 </html>
