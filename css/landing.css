@@ -979,3 +979,257 @@ h2 {
   color: var(--texto-suave);
   margin: 0 0 16px;
 }
+
+/* ---------- botão da App Store ---------- */
+
+button.botao-play {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.botao-apple svg {
+  color: #fff;
+}
+
+.acoes-centro {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* ---------- janela da lista de aviso do iPhone ---------- */
+
+.aviso {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(460px, calc(100vw - 32px));
+  width: 100%;
+  margin: auto;
+}
+
+.aviso::backdrop {
+  background: rgba(47, 37, 31, 0.45);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.aviso[open] {
+  animation: aviso-entra 0.22s ease-out;
+}
+
+@keyframes aviso-entra {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}
+
+.aviso-caixa {
+  position: relative;
+  background: var(--superficie);
+  border-radius: 28px;
+  padding: 32px 26px 26px;
+  box-shadow: 0 30px 70px -20px rgba(40, 20, 10, 0.45);
+  color: var(--texto);
+}
+
+@media (min-width: 520px) {
+  .aviso-caixa {
+    padding: 38px 36px 32px;
+  }
+}
+
+.aviso-fechar {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--fundo);
+  color: var(--texto-suave);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.aviso-fechar:hover {
+  background: var(--pessego);
+  color: var(--texto);
+}
+
+.aviso-icone {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: #1f1a17;
+  color: #fff;
+  margin: 0 auto 18px;
+}
+
+.aviso-icone svg {
+  width: 28px;
+  height: 28px;
+}
+
+.aviso h2 {
+  font-size: 26px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.aviso-texto {
+  color: var(--texto-suave);
+  font-size: 16px;
+  margin: 0 0 22px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.aviso-consentimento span {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.aviso-campos {
+  display: grid;
+  gap: 12px;
+}
+
+.aviso-rotulo {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.aviso input[type="email"] {
+  font: inherit;
+  font-size: 16px;
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--borda);
+  border-radius: 14px;
+  background: var(--fundo);
+  color: var(--texto);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.aviso input[type="email"]:focus {
+  border-color: var(--marca);
+  box-shadow: 0 0 0 4px rgba(210, 101, 78, 0.15);
+  background: var(--superficie);
+}
+
+.aviso-mel {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.aviso-consentimento {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--texto-suave);
+  cursor: pointer;
+}
+
+.aviso-consentimento input {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0;
+  accent-color: var(--marca);
+}
+
+.aviso-enviar {
+  font: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 18px;
+  background: var(--marca);
+  color: #fff;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.15s;
+}
+
+.aviso-enviar:hover {
+  background: var(--marca-escura);
+}
+
+.aviso-enviar:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.aviso-status {
+  margin: 0;
+  font-size: 14px;
+  min-height: 1px;
+}
+
+.aviso-status.ok {
+  color: #2f7a4f;
+  font-weight: 600;
+}
+
+.aviso-status.erro {
+  color: #b23a2c;
+}
+
+.aviso-caixa.enviado .aviso-rotulo,
+.aviso-caixa.enviado input,
+.aviso-caixa.enviado .aviso-consentimento,
+.aviso-caixa.enviado .aviso-enviar {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .topo .botao-apple {
+    display: none;
+  }
+}
+
+/* ---------- textos corridos justificados ---------- */
+/* Títulos não entram: só parágrafos, itens de lista e respostas. */
+
+main p,
+main li,
+.aviso-texto,
+.aviso-consentimento span {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* Os blocos centralizados continuam com a última linha no centro. */
+.titulo-secao p,
+.chamada p {
+  text-align: justify;
+  text-align-last: center;
+}
+
+/* Rótulos curtos de uma linha não se justificam. */
+.nota,
+.preco,
+.faixa li,
+.botao-play small {
+  text-align: left;
+  hyphens: manual;
+}
