@@ -30,7 +30,6 @@
   </head>
 
   <body>
-    <!-- Gerado por tool/landing/gerar.mjs. Não edite à mão. -->
     <header class="topo">
       <div class="conteiner">
         <a class="marca" href="index.html">
@@ -277,6 +276,26 @@
           </div>
           <div class="perguntas">
             <details class="surge">
+              <summary>Was kann ich mit der App machen?</summary>
+              <p>Fotos und Videos auf einer Zeitleiste nach dem Alter des Kindes sammeln, Briefe schreiben, die sich erst am gewählten Datum öffnen, Gewicht und Größe in einem Diagramm verfolgen, Zeichnungen und Dokumente aufbewahren, Ideen für Momente und Erinnerungen an besonderen Tagen erhalten. Alles liegt im Google Drive des Kindes.</p>
+            </details>
+            <details class="surge">
+              <summary>Kann ich mehr als ein Kind hinzufügen?</summary>
+              <p>Ja. Jedes Kind bekommt seine eigene Kapsel mit eigenem Google-Konto, und Sie wechseln mit einem Tipp. Beim Hochladen können Sie ein Foto auch in die Kapseln der Geschwister schicken. Premium Familie gilt für die Kapseln von bis zu sechs Kindern.</p>
+            </details>
+            <details class="surge">
+              <summary>Was kostet Premium?</summary>
+              <p>Es ist ein Jahresabo, abgerechnet über Google Play zum Preis Ihres Landes, und ein Abo gilt für alle Ihre Kinder. Fotos, Videos und die Zeitleiste sind für immer kostenlos, ohne Abo.</p>
+            </details>
+            <details class="surge">
+              <summary>Brauchen Fotos und Videos viel Platz im Drive?</summary>
+              <p>Videos werden vor dem Hochladen komprimiert und brauchen so viel weniger Platz, sehen auf dem Handy aber weiterhin gut aus. Jedes Google-Konto hat 15 GB kostenlos, und die App nutzt diesen Platz im Konto des Kindes.</p>
+            </details>
+            <details class="surge">
+              <summary>Kann ich die App auf einem anderen Handy nutzen?</summary>
+              <p>Ja. App installieren und mit demselben Google-Konto des Kindes anmelden: Zeitleiste und alle Dateien sind wieder da, weil sie im Drive des Kindes liegen und nicht auf dem Gerät.</p>
+            </details>
+            <details class="surge">
               <summary>Wo werden die Fotos und Videos gespeichert?</summary>
               <p>Im Google Drive des Google-Kontos des Kindes, in einem Ordner, den die App anlegt und nach Alter ordnet. Die App behält keine Kopie der Dateien.</p>
             </details>
@@ -360,8 +379,6 @@
         window.addEventListener("scroll", rolar, { passive: true });
         rolar();
 
-        // O menu de idiomas fecha ao tocar fora dele ou ao apertar Esc.
-        // A lista de aviso do iPhone.
         var janela = document.getElementById("aviso-iphone");
         var form = janela.querySelector("form");
         var status = janela.querySelector(".aviso-status");
@@ -377,7 +394,7 @@
         form.addEventListener("submit", function (e) {
           e.preventDefault();
           var email = form.email.value.trim();
-          if (!/^[^s@]+@[^s@]+.[^s@]{2,}$/.test(email) || !form.consentimento.checked) {
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || !form.consentimento.checked) {
             status.className = "aviso-status erro";
             status.textContent = status.dataset.invalido;
             return;

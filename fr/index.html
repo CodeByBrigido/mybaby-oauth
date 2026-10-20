@@ -30,7 +30,6 @@
   </head>
 
   <body>
-    <!-- Gerado por tool/landing/gerar.mjs. Não edite à mão. -->
     <header class="topo">
       <div class="conteiner">
         <a class="marca" href="index.html">
@@ -277,6 +276,26 @@
           </div>
           <div class="perguntas">
             <details class="surge">
+              <summary>Que peut-on faire dans l'application ?</summary>
+              <p>Garder photos et vidéos sur une frise organisée selon l'âge de l'enfant, écrire des lettres qui ne s'ouvrent qu'à la date choisie, suivre le poids et la taille sur un graphique, garder dessins et documents, recevoir des idées de moments à immortaliser et des rappels aux dates importantes. Tout reste dans le Google Drive de l'enfant.</p>
+            </details>
+            <details class="surge">
+              <summary>Peut-on ajouter plusieurs enfants ?</summary>
+              <p>Oui. Chaque enfant a sa propre capsule, avec son propre compte Google, et vous passez de l'une à l'autre d'une touche. En envoyant une photo, vous pouvez aussi l'ajouter à la capsule des frères et sœurs. Premium famille couvre les capsules de six enfants au maximum.</p>
+            </details>
+            <details class="surge">
+              <summary>Combien coûte Premium ?</summary>
+              <p>C'est un abonnement annuel, facturé par Google Play au prix de votre pays, et un seul abonnement vaut pour tous vos enfants. Les photos, les vidéos et la frise sont gratuites pour toujours, sans abonnement.</p>
+            </details>
+            <details class="surge">
+              <summary>Les photos et vidéos prennent-elles beaucoup de place dans le Drive ?</summary>
+              <p>Les vidéos sont compressées avant l'envoi : elles prennent bien moins de place tout en restant belles sur un téléphone. Chaque compte Google offre 15 Go gratuits, et l'application utilise cet espace dans le compte de l'enfant.</p>
+            </details>
+            <details class="surge">
+              <summary>Puis-je l'utiliser sur un autre téléphone ?</summary>
+              <p>Oui. Il suffit d'installer l'application et de se connecter avec le même compte Google de l'enfant : la frise et tous les fichiers reviennent, car ils sont dans son Drive et non sur l'appareil.</p>
+            </details>
+            <details class="surge">
               <summary>Où sont stockées les photos et vidéos ?</summary>
               <p>Dans le Google Drive du compte Google de l'enfant, dans un dossier créé par l'application et organisé par âge. L'application ne garde aucune copie des fichiers.</p>
             </details>
@@ -360,8 +379,6 @@
         window.addEventListener("scroll", rolar, { passive: true });
         rolar();
 
-        // O menu de idiomas fecha ao tocar fora dele ou ao apertar Esc.
-        // A lista de aviso do iPhone.
         var janela = document.getElementById("aviso-iphone");
         var form = janela.querySelector("form");
         var status = janela.querySelector(".aviso-status");
@@ -377,7 +394,7 @@
         form.addEventListener("submit", function (e) {
           e.preventDefault();
           var email = form.email.value.trim();
-          if (!/^[^s@]+@[^s@]+.[^s@]{2,}$/.test(email) || !form.consentimento.checked) {
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || !form.consentimento.checked) {
             status.className = "aviso-status erro";
             status.textContent = status.dataset.invalido;
             return;

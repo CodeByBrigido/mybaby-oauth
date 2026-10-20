@@ -30,7 +30,6 @@
   </head>
 
   <body>
-    <!-- Gerado por tool/landing/gerar.mjs. Não edite à mão. -->
     <header class="topo">
       <div class="conteiner">
         <a class="marca" href="index.html">
@@ -277,6 +276,26 @@
           </div>
           <div class="perguntas">
             <details class="surge">
+              <summary>What can I do in the app?</summary>
+              <p>Keep photos and videos on a timeline organised by your child's age, write letters that only open on the date you choose, follow weight and height on a chart, keep drawings and documents, get ideas of moments to capture and reminders on special dates. Everything lives in the child's Google Drive.</p>
+            </details>
+            <details class="surge">
+              <summary>Can I add more than one child?</summary>
+              <p>Yes. Each child gets their own capsule, with their own Google account, and you switch between them with a tap. When you upload a photo, you can send it to the siblings' capsules too. Premium family covers the capsules of up to six children.</p>
+            </details>
+            <details class="surge">
+              <summary>How much does Premium cost?</summary>
+              <p>It is a yearly subscription, billed by Google Play at your country's price, and one subscription covers all your children. Photos, videos and the timeline are free forever, with no subscription.</p>
+            </details>
+            <details class="surge">
+              <summary>Do photos and videos take up a lot of Drive space?</summary>
+              <p>Videos are compressed before uploading, so they take much less space while still looking good on a phone. Every Google account comes with 15 GB free, and the app uses that space in the child's account.</p>
+            </details>
+            <details class="surge">
+              <summary>Can I use it on another phone?</summary>
+              <p>Yes. Just install the app and sign in with the same Google account of the child: the timeline and every file come back, because they live in the child's Drive, not on the device.</p>
+            </details>
+            <details class="surge">
               <summary>Where are the photos and videos stored?</summary>
               <p>In the Google Drive of the child's Google account, in a folder the app creates and organises by age. The app keeps no copy of the files.</p>
             </details>
@@ -360,8 +379,6 @@
         window.addEventListener("scroll", rolar, { passive: true });
         rolar();
 
-        // O menu de idiomas fecha ao tocar fora dele ou ao apertar Esc.
-        // A lista de aviso do iPhone.
         var janela = document.getElementById("aviso-iphone");
         var form = janela.querySelector("form");
         var status = janela.querySelector(".aviso-status");
@@ -377,7 +394,7 @@
         form.addEventListener("submit", function (e) {
           e.preventDefault();
           var email = form.email.value.trim();
-          if (!/^[^s@]+@[^s@]+.[^s@]{2,}$/.test(email) || !form.consentimento.checked) {
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || !form.consentimento.checked) {
             status.className = "aviso-status erro";
             status.textContent = status.dataset.invalido;
             return;

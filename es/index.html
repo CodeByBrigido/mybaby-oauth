@@ -30,7 +30,6 @@
   </head>
 
   <body>
-    <!-- Gerado por tool/landing/gerar.mjs. Não edite à mão. -->
     <header class="topo">
       <div class="conteiner">
         <a class="marca" href="index.html">
@@ -277,6 +276,26 @@
           </div>
           <div class="perguntas">
             <details class="surge">
+              <summary>¿Qué se puede hacer en la app?</summary>
+              <p>Guardar fotos y vídeos en una línea de tiempo ordenada por la edad del niño, escribir cartas que solo se abren en la fecha que elijas, seguir el peso y la altura en un gráfico, guardar dibujos y documentos, recibir ideas de momentos para registrar y avisos en las fechas especiales. Todo queda en el Google Drive del niño.</p>
+            </details>
+            <details class="surge">
+              <summary>¿Puedo añadir más de un hijo?</summary>
+              <p>Sí. Cada hijo tiene su propia cápsula, con su propia cuenta de Google, y cambias entre ellas con un toque. Al subir una foto, puedes enviarla también a la cápsula de los hermanos. Premium familia vale para las cápsulas de hasta seis hijos.</p>
+            </details>
+            <details class="surge">
+              <summary>¿Cuánto cuesta Premium?</summary>
+              <p>Es una suscripción anual, cobrada por Google Play con el precio de tu país, y una sola suscripción vale para todos tus hijos. Las fotos, los vídeos y la línea de tiempo son gratis para siempre, sin suscripción.</p>
+            </details>
+            <details class="surge">
+              <summary>¿Las fotos y los vídeos ocupan mucho espacio en el Drive?</summary>
+              <p>Los vídeos se comprimen antes de subirlos, para que ocupen mucho menos sin perder calidad al verlos en el móvil. Toda cuenta de Google incluye 15 GB gratis, y la app usa ese espacio de la cuenta del niño.</p>
+            </details>
+            <details class="surge">
+              <summary>¿Puedo usarla en otro móvil?</summary>
+              <p>Sí. Basta con instalar la app y entrar con la misma cuenta de Google del niño: la línea de tiempo y todos los archivos vuelven, porque están en su Drive y no en el dispositivo.</p>
+            </details>
+            <details class="surge">
               <summary>¿Dónde se guardan las fotos y los vídeos?</summary>
               <p>En el Google Drive de la cuenta de Google del niño, en una carpeta que crea la app y ordena por edad. La app no guarda copia de los archivos.</p>
             </details>
@@ -360,8 +379,6 @@
         window.addEventListener("scroll", rolar, { passive: true });
         rolar();
 
-        // O menu de idiomas fecha ao tocar fora dele ou ao apertar Esc.
-        // A lista de aviso do iPhone.
         var janela = document.getElementById("aviso-iphone");
         var form = janela.querySelector("form");
         var status = janela.querySelector(".aviso-status");
@@ -377,7 +394,7 @@
         form.addEventListener("submit", function (e) {
           e.preventDefault();
           var email = form.email.value.trim();
-          if (!/^[^s@]+@[^s@]+.[^s@]{2,}$/.test(email) || !form.consentimento.checked) {
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || !form.consentimento.checked) {
             status.className = "aviso-status erro";
             status.textContent = status.dataset.invalido;
             return;

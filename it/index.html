@@ -30,7 +30,6 @@
   </head>
 
   <body>
-    <!-- Gerado por tool/landing/gerar.mjs. Não edite à mão. -->
     <header class="topo">
       <div class="conteiner">
         <a class="marca" href="index.html">
@@ -277,6 +276,26 @@
           </div>
           <div class="perguntas">
             <details class="surge">
+              <summary>Cosa si può fare nell'app?</summary>
+              <p>Conservare foto e video in una linea del tempo ordinata per età, scrivere lettere che si aprono solo nella data che scegli, seguire peso e altezza in un grafico, conservare disegni e documenti, ricevere idee di momenti da registrare e promemoria nelle date speciali. Tutto resta nel Google Drive del bambino.</p>
+            </details>
+            <details class="surge">
+              <summary>Posso aggiungere più di un figlio?</summary>
+              <p>Sì. Ogni figlio ha la propria capsula, con il proprio account Google, e passi dall'una all'altra con un tocco. Quando carichi una foto, puoi mandarla anche nella capsula dei fratelli. Premium famiglia vale per le capsule di un massimo di sei figli.</p>
+            </details>
+            <details class="surge">
+              <summary>Quanto costa Premium?</summary>
+              <p>È un abbonamento annuale, addebitato da Google Play al prezzo del tuo paese, e un solo abbonamento vale per tutti i tuoi figli. Foto, video e la linea del tempo sono gratis per sempre, senza abbonamento.</p>
+            </details>
+            <details class="surge">
+              <summary>Foto e video occupano molto spazio nel Drive?</summary>
+              <p>I video vengono compressi prima del caricamento, così occupano molto meno spazio restando belli sul telefono. Ogni account Google include 15 GB gratuiti, e l'app usa quello spazio nell'account del bambino.</p>
+            </details>
+            <details class="surge">
+              <summary>Posso usarla su un altro telefono?</summary>
+              <p>Sì. Basta installare l'app ed entrare con lo stesso account Google del bambino: la linea del tempo e tutti i file tornano, perché sono nel suo Drive e non sul dispositivo.</p>
+            </details>
+            <details class="surge">
               <summary>Dove vengono salvati foto e video?</summary>
               <p>Nel Google Drive dell'account Google del bambino, in una cartella creata dall'app e ordinata per età. L'app non conserva copie dei file.</p>
             </details>
@@ -360,8 +379,6 @@
         window.addEventListener("scroll", rolar, { passive: true });
         rolar();
 
-        // O menu de idiomas fecha ao tocar fora dele ou ao apertar Esc.
-        // A lista de aviso do iPhone.
         var janela = document.getElementById("aviso-iphone");
         var form = janela.querySelector("form");
         var status = janela.querySelector(".aviso-status");
@@ -377,7 +394,7 @@
         form.addEventListener("submit", function (e) {
           e.preventDefault();
           var email = form.email.value.trim();
-          if (!/^[^s@]+@[^s@]+.[^s@]{2,}$/.test(email) || !form.consentimento.checked) {
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) || !form.consentimento.checked) {
             status.className = "aviso-status erro";
             status.textContent = status.dataset.invalido;
             return;
