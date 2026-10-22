@@ -47,7 +47,9 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
+  /* Os links internos (#perguntas…) param abaixo do cabeçalho fixo. */
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -58,7 +60,9 @@ body {
     Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
+  /* O espaço do cabeçalho fixo. */
+  padding-top: 64px;
 }
 
 img {
@@ -87,8 +91,11 @@ a {
 /* ---------- topo ---------- */
 
 .topo {
-  position: sticky;
+  /* Fixo no topo enquanto a página rola. */
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
   background: rgba(252, 243, 238, 0.88);
   backdrop-filter: saturate(1.4) blur(12px);
