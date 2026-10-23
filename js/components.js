@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  loadComponent('[data-component="header"]', "header.html");
-
   loadComponent('[data-component="footer"]', "footer.html");
 });
 
@@ -19,16 +17,6 @@ async function loadComponent(selector, file) {
     }
 
     container.innerHTML = await response.text();
-
-    if (file === "header.html") {
-      const title = document.body.dataset.pageTitle;
-
-      const titleElement = container.querySelector("[data-page-title]");
-
-      if (titleElement && title) {
-        titleElement.textContent = title;
-      }
-    }
 
     if (file === "footer.html") {
       configureLanguageLinks();

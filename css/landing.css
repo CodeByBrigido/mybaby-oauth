@@ -291,6 +291,43 @@ h1 em {
   color: var(--marca);
 }
 
+/* O selo mora dentro do h1: é a parte do título com as palavras que as
+   pessoas buscam ("álbum do bebê"). Por fora, continua igual ao selo. */
+h1 .selo {
+  display: block;
+  width: fit-content;
+  line-height: 1.4;
+}
+
+/* A página de "não encontrada" (404.html). */
+.nao-achada {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 48px 0;
+}
+.nao-achada .marca {
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.nao-achada ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+}
+.nao-achada a {
+  color: var(--marca);
+  font-weight: 600;
+}
+.nao-achada p {
+  text-align: center;
+}
+
 .lead {
   font-size: clamp(18px, 2.4vw, 21px);
   color: var(--texto-suave);
