@@ -1277,3 +1277,431 @@ main li,
   text-align: left;
   hyphens: manual;
 }
+
+/* ---------- blog e calculadora ---------- */
+
+.conteiner.estreito {
+  max-width: 760px;
+}
+
+.conteiner.medio {
+  max-width: 1000px;
+}
+
+.artigo,
+.blog,
+.ferramenta {
+  padding: 28px 0 72px;
+}
+
+.artigo h1,
+.blog h1,
+.ferramenta h1 {
+  font-size: clamp(32px, 6vw, 48px);
+  line-height: 1.12;
+  margin: 0 0 16px;
+}
+
+.migalhas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  font-size: 14px;
+  color: var(--texto-suave);
+  margin-bottom: 24px;
+}
+
+.migalhas a {
+  color: var(--texto-suave);
+}
+
+.migalhas [aria-current] {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.capa {
+  width: 100%;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  margin: 12px 0 8px;
+}
+
+.corpo h2,
+.convite h2,
+.relacionadas h2,
+.fase h2 {
+  font-size: clamp(22px, 3.4vw, 28px);
+  line-height: 1.25;
+  margin: 36px 0 12px;
+}
+
+.corpo p,
+.corpo li {
+  font-size: 18px;
+}
+
+.convite {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 28px 24px;
+  margin-top: 48px;
+}
+
+.convite h2 {
+  margin-top: 0;
+}
+
+.convite .nota {
+  display: block;
+  margin-top: 12px;
+}
+
+.relacionadas {
+  padding-top: 40px;
+}
+
+.ver-todas {
+  text-align: center;
+  margin: 28px 0 0;
+  font-weight: 600;
+}
+
+/* As fases na lista do blog: sem o espaço grande das seções da vitrine. */
+.blog .fase {
+  padding: 24px 0 8px;
+}
+
+.grade-blog {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .grade-blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .grade-blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cartao-blog {
+  display: flex;
+  flex-direction: column;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  overflow: hidden;
+  color: var(--texto);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao-blog:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra);
+}
+
+.cartao-blog img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.cartao-blog-texto {
+  display: block;
+  padding: 16px 18px 20px;
+}
+
+.cartao-blog .marcador {
+  margin-bottom: 6px;
+}
+
+.cartao-blog h2,
+.cartao-blog h3 {
+  font-size: 19px;
+  line-height: 1.3;
+  margin: 0 0 6px;
+}
+
+.cartao-blog-resumo {
+  display: block;
+  font-size: 15px;
+  color: var(--texto-suave);
+}
+
+.chamada-ferramenta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 20px;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 22px 24px;
+  margin-top: 40px;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.chamada-ferramenta > span:nth-child(2) {
+  flex: 1 1 260px;
+}
+
+.chamada-ferramenta strong {
+  display: block;
+  font-size: 19px;
+}
+
+.chamada-ferramenta-icone {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--pessego);
+  color: var(--marca);
+}
+
+.chamada-ferramenta-icone svg {
+  width: 26px;
+  height: 26px;
+}
+
+.chamada-ferramenta-botao {
+  font-weight: 600;
+  color: var(--marca-escura);
+}
+
+/* ---------- calculadora ---------- */
+
+.calculadora {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 24px 20px;
+  margin-top: 28px;
+  display: grid;
+  gap: 20px;
+}
+
+.calculadora fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.calculadora legend,
+.campo > span {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.campo small {
+  font-weight: 400;
+  color: var(--texto-suave);
+}
+
+.opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.opcao {
+  position: relative;
+}
+
+.opcao input {
+  position: absolute;
+  opacity: 0;
+}
+
+.opcao span {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.opcao input:checked + span {
+  background: var(--marca);
+  border-color: var(--marca);
+  color: #fff;
+}
+
+.opcao input:focus-visible + span {
+  outline: 3px solid var(--lavanda-suave);
+  outline-offset: 2px;
+}
+
+.campos {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 560px) {
+  .campos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 720px) {
+  .campos.tres {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.campo {
+  display: block;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  font: inherit;
+  font-size: 17px;
+  color: var(--texto);
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 11px 12px;
+  min-height: 48px;
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: 3px solid var(--lavanda-suave);
+  border-color: var(--lavanda);
+}
+
+.campo .ajuda {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.botao-calcular {
+  font: inherit;
+  font-weight: 800;
+  font-size: 18px;
+  color: #fff;
+  background: var(--marca);
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 24px;
+  cursor: pointer;
+}
+
+.botao-calcular:hover {
+  background: var(--marca-escura);
+}
+
+.resultado {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.resultado-idade {
+  margin: 0;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.resultado-item {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  padding: 18px 20px;
+}
+
+.resultado-topo {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.resultado-valor {
+  color: var(--texto-suave);
+}
+
+.resultado-percentil {
+  margin: 6px 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+}
+
+.resultado-percentil strong {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--marca);
+}
+
+.resultado-percentil span {
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+/* A régua: do percentil 0 ao 100, com a faixa do meio mais escura. */
+.regua {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--pessego) 0 3%, var(--lavanda-suave) 3% 15%, #ead2e3 15% 85%, var(--lavanda-suave) 85% 97%, var(--pessego) 97%);
+  margin-bottom: 12px;
+}
+
+.regua span {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  background: var(--lavanda);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.resultado-frase {
+  margin: 0;
+}
+
+.resultado-erro {
+  margin: 8px 0 0;
+  color: #b3261e;
+  font-weight: 600;
+}
+
+.aviso-medico {
+  font-size: 15px;
+  background: var(--lavanda-suave);
+  border-radius: 16px;
+  padding: 14px 18px;
+  margin: 24px 0 8px;
+}
+
+.ferramenta .perguntas {
+  margin-top: 8px;
+}
+
+.fonte {
+  font-size: 14px;
+  color: var(--texto-suave);
+  margin-top: 24px;
+}
