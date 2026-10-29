@@ -211,9 +211,19 @@ a {
   font-size: 14px;
 }
 
-@media (max-width: 520px) {
+/* Em tela estreita, os dois botões do topo ficam só com o ícone. O nome
+   continua lá para leitores de tela. */
+@media (max-width: 760px) {
   .topo .botao-pequeno {
-    display: none;
+    padding: 9px 11px;
+  }
+  .topo .botao-pequeno strong {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
 }
 
@@ -1244,12 +1254,6 @@ button.botao-play {
   display: none;
 }
 
-@media (max-width: 760px) {
-  .topo .botao-apple {
-    display: none;
-  }
-}
-
 /* ---------- textos corridos justificados ---------- */
 /* Títulos não entram: só parágrafos, itens de lista e respostas. */
 
@@ -1349,6 +1353,11 @@ main li,
   border-radius: var(--raio);
   padding: 28px 24px;
   margin-top: 48px;
+  text-align: center;
+}
+
+.convite p {
+  text-align: center;
 }
 
 .convite h2 {
@@ -1370,9 +1379,79 @@ main li,
   font-weight: 600;
 }
 
+/* Na lista do blog, a abertura usa a largura toda da página. */
+.blog .lead {
+  max-width: none;
+}
+
 /* As fases na lista do blog: sem o espaço grande das seções da vitrine. */
 .blog .fase {
   padding: 24px 0 8px;
+}
+
+/* As abas das fases. No celular, uma linha que rola para o lado. */
+.abas {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 32px -16px 0;
+  padding: 2px 16px 6px;
+}
+
+.abas::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .abas {
+    flex-wrap: wrap;
+    overflow: visible;
+    margin: 32px 0 0;
+    padding: 2px 0 6px;
+  }
+}
+
+.aba {
+  flex: none;
+  padding: 10px 18px;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  background: var(--superficie);
+  color: var(--texto);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.aba:hover {
+  border-color: var(--marca);
+}
+
+.aba[aria-selected="true"] {
+  background: var(--marca);
+  border-color: var(--marca);
+  color: #fff;
+}
+
+/* Com JavaScript, só a fase escolhida aparece, e o título dela já está na aba. */
+.js .blog .fase {
+  display: none;
+}
+
+.js .blog .fase.ativa {
+  display: block;
+}
+
+.js .blog .fase h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .grade-blog {

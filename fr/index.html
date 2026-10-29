@@ -47,7 +47,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mybabytimecapsule.com/#organizacao","name":"Brigido's Studio","url":"https://mybabytimecapsule.com/","logo":"https://mybabytimecapsule.com/img/icone-512.png","email":"support@mybabytimecapsule.com"},{"@type":"WebSite","@id":"https://mybabytimecapsule.com/#site","url":"https://mybabytimecapsule.com/","name":"My Baby - Time Capsule","alternateName":["My Baby Time Capsule","mybabytimecapsule.com"],"inLanguage":["pt-BR","en","es","fr","de","it"],"publisher":{"@id":"https://mybabytimecapsule.com/#organizacao"}},{"@type":"WebPage","@id":"https://mybabytimecapsule.com/fr/#pagina","url":"https://mybabytimecapsule.com/fr/","name":"Album Bébé et Journal de Bébé | My Baby - Time Capsule","description":"Application d'album bébé pour Android : gardez photos, vidéos, lettres pour le futur et la croissance de votre enfant sur une frise par âge, dans son Google Drive.","inLanguage":"fr","isPartOf":{"@id":"https://mybabytimecapsule.com/#site"},"about":{"@id":"https://mybabytimecapsule.com/#app"},"primaryImageOfPage":"https://mybabytimecapsule.com/img/fr/og.jpg"},{"@type":"MobileApplication","@id":"https://mybabytimecapsule.com/#app","name":"My Baby - Time Capsule","operatingSystem":"Android","applicationCategory":"LifestyleApplication","description":"Application d'album bébé pour Android : gardez photos, vidéos, lettres pour le futur et la croissance de votre enfant sur une frise par âge, dans son Google Drive.","url":"https://mybabytimecapsule.com/fr/","image":"https://mybabytimecapsule.com/img/icone-512.png","screenshot":["https://mybabytimecapsule.com/img/fr/3.webp","https://mybabytimecapsule.com/img/fr/1.webp","https://mybabytimecapsule.com/img/fr/4.webp","https://mybabytimecapsule.com/img/fr/6.webp"],"inLanguage":["pt-BR","en","es","fr","de","it"],"installUrl":"https://play.google.com/store/apps/details?id=com.mybabytimecapsule.app","downloadUrl":"https://play.google.com/store/apps/details?id=com.mybabytimecapsule.app","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@id":"https://mybabytimecapsule.com/#organizacao"}},{"@type":"FAQPage","@id":"https://mybabytimecapsule.com/fr/#perguntas","inLanguage":"fr","mainEntity":[{"@type":"Question","name":"Que peut-on faire dans l'application ?","acceptedAnswer":{"@type":"Answer","text":"Garder photos et vidéos sur une frise organisée selon l'âge de l'enfant, écrire des lettres qui ne s'ouvrent qu'à la date choisie, suivre le poids et la taille sur un graphique, garder dessins et documents, recevoir des idées de moments à immortaliser et des rappels aux dates importantes. Tout reste dans le Google Drive de l'enfant."}},{"@type":"Question","name":"Peut-on ajouter plusieurs enfants ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Chaque enfant a sa propre capsule, avec son propre compte Google, et vous passez de l'une à l'autre d'une touche. En envoyant une photo, vous pouvez aussi l'ajouter à la capsule des frères et sœurs. Premium famille couvre les capsules de six enfants au maximum."}},{"@type":"Question","name":"Combien coûte Premium ?","acceptedAnswer":{"@type":"Answer","text":"C'est un abonnement annuel, facturé par Google Play au prix de votre pays, et un seul abonnement vaut pour tous vos enfants. Les photos, les vidéos et la frise sont gratuites pour toujours, sans abonnement."}},{"@type":"Question","name":"Les photos et vidéos prennent-elles beaucoup de place dans le Drive ?","acceptedAnswer":{"@type":"Answer","text":"Les vidéos sont compressées avant l'envoi : elles prennent bien moins de place tout en restant belles sur un téléphone. Chaque compte Google offre 15 Go gratuits, et l'application utilise cet espace dans le compte de l'enfant."}},{"@type":"Question","name":"Puis-je l'utiliser sur un autre téléphone ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Il suffit d'installer l'application et de se connecter avec le même compte Google de l'enfant : la frise et tous les fichiers reviennent, car ils sont dans son Drive et non sur l'appareil."}},{"@type":"Question","name":"Où sont stockées les photos et vidéos ?","acceptedAnswer":{"@type":"Answer","text":"Dans le Google Drive du compte Google de l'enfant, dans un dossier créé par l'application et organisé par âge. L'application ne garde aucune copie des fichiers."}},{"@type":"Question","name":"Faut-il un compte Google pour chaque enfant ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Chaque enfant a son propre compte, et c'est ce qui fait que la capsule est vraiment la sienne. Dans l'application, vous ajoutez les comptes et passez de l'un à l'autre d'une touche."}},{"@type":"Question","name":"Et si j'annule Premium ?","acceptedAnswer":{"@type":"Answer","text":"Rien ne disparaît. Tout ce que vous avez gardé reste dans le Drive et ouvert dans l'application, et les photos et vidéos restent gratuites. Seule la création de lettres, dessins, documents et mesures redemande l'abonnement."}},{"@type":"Question","name":"Est-ce que ça marche sur iPhone ?","acceptedAnswer":{"@type":"Answer","text":"Pour l'instant, l'application n'est disponible que sur Android, sur Google Play."}},{"@type":"Question","name":"Comment supprimer mon compte et mes données ?","acceptedAnswer":{"@type":"Answer","text":"Depuis l'application, ou en suivant les étapes de la page de suppression du compte. Les fichiers de votre Drive vous appartiennent et vous seul décidez quoi en faire."}}]}]}</script>
 
     <link rel="preload" href="../fonts/PlusJakartaSans-ExtraBold.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="../css/landing.css?v=901e1df175" />
+    <link rel="stylesheet" href="../css/landing.css?v=b940f11994" />
     <script>
       document.documentElement.classList.add("js");
     </script>
@@ -442,12 +442,20 @@
     <script>
       (function () {
         var topo = document.querySelector(".topo");
-        function rolar() {
-          topo.classList.toggle("rolou", window.scrollY > 8);
-        }
+        function rolar() { topo.classList.toggle("rolou", window.scrollY > 8); }
         window.addEventListener("scroll", rolar, { passive: true });
         rolar();
-
+        var menu = document.querySelector(".idiomas");
+        document.addEventListener("click", function (e) {
+          if (menu.open && !menu.contains(e.target)) menu.open = false;
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") menu.open = false;
+        });
+      })();
+    </script>
+    <script>
+      (function () {
         var janela = document.getElementById("aviso-iphone");
         var form = janela.querySelector("form");
         var status = janela.querySelector(".aviso-status");
@@ -492,15 +500,10 @@
             status.textContent = status.dataset.erro;
           });
         });
-
-        var menu = document.querySelector(".idiomas");
-        document.addEventListener("click", function (e) {
-          if (menu.open && !menu.contains(e.target)) menu.open = false;
-        });
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape") menu.open = false;
-        });
-
+      })();
+    </script>
+    <script>
+      (function () {
         var itens = document.querySelectorAll(".surge");
         if (!("IntersectionObserver" in window)) {
           itens.forEach(function (el) { el.classList.add("visivel"); });
